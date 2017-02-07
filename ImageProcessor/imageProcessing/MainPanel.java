@@ -104,7 +104,7 @@ public class MainPanel extends JPanel {
 		// image
 		// StretchIcon taken from
 		// http://www.camick.com/java/source/StretchIcon.java
-		ImageIcon image = new StretchIcon(origFnExt);
+		StretchIcon image = new StretchIcon(origFnExt);
 		imageLabel = new JLabel(image);
 
 		// populate panel
@@ -158,7 +158,7 @@ public class MainPanel extends JPanel {
 					JOptionPane.showMessageDialog(null,"could not load file");
 				}
 				imageList = new ImageList (currImage); // Create new ImageList for undo / redo
-				ImageIcon imageIc = new ImageIcon(currImage);
+				StretchIcon imageIc = new StretchIcon(currImage);
 				imageLabel.setIcon(imageIc);
 			}
 		}
@@ -233,7 +233,7 @@ public class MainPanel extends JPanel {
 				imageList.add(currImage);
 			}
 			
-			ImageIcon imageIc = new ImageIcon(currImage);
+			StretchIcon imageIc = new StretchIcon(currImage);
 			imageLabel.setIcon(imageIc);
 		}
 	}
